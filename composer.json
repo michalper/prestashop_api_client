@@ -19,10 +19,17 @@
     "prestashop",
     "presta"
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/michalper/tools"
+    }
+  ],
   "require": {
     "php": ">=7.0",
     "guzzlehttp/guzzle": "~6.0",
-    "itav/serializer": "^1.2"
+    "itav/serializer": "^1.2",
+    "michalper/tools": "dev-master"
   },
   "require-dev": {
   },

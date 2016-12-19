@@ -27,7 +27,7 @@ class PrestaShopClient
 
     /**
      * @var Serializer
-     */ 
+     */
     private $serializer;
 
     /**

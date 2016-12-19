@@ -5,6 +5,7 @@ namespace PrestaShopClient\Service;
 use Itav\Component\Serializer\Serializer;
 use PrestaShopClient\Model\Order\OrderModel;
 use PrestaShopClient\Model\SearchModel;
+use Tools\Tools;
 
 /**
  * Class OrderService
@@ -75,10 +76,16 @@ class OrderService implements ServiceInterface
             isset($order['orders'])
             && isset($order['orders']['order'])
         ) {
-            foreach ($order['orders']['order'] as $order) {
-                $order = $this->serializer->denormalize($order, OrderModel::class);
+            if (!Tools::isNumericArray($order['orders']['order'])) {
+                $order = $this->serializer->denormalize($order['orders']['order'], OrderModel::class);
                 /** @var OrderModel $order */
                 $ret[$order->getId()] = $order;
+            } else {
+                foreach ($order['orders']['order'] as $order) {
+                    $order = $this->serializer->denormalize($order, OrderModel::class);
+                    /** @var OrderModel $order */
+                    $ret[$order->getId()] = $order;
+                }
             }
             return $ret;
         }

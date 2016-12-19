@@ -5,6 +5,7 @@ namespace PrestaShopClient\Service;
 use Itav\Component\Serializer\Serializer;
 use PrestaShopClient\Model\Customer\CustomerModel;
 use PrestaShopClient\Model\SearchModel;
+use Tools\Tools;
 
 /**
  * Class CustomerService
@@ -74,10 +75,16 @@ class CustomerService implements ServiceInterface
             isset($customer['customers'])
             && isset($customer['customers']['customer'])
         ) {
-            foreach ($customer['customers']['customer'] as $customer) {
-                $customer = $this->serializer->denormalize($customer, CustomerModel::class);
+            if (!Tools::isNumericArray($customer['customers']['customer'])) {
+                $customer = $this->serializer->denormalize($customer['customers']['customer'], CustomerModel::class);
                 /** @var CustomerModel $customer */
                 $ret[$customer->getId()] = $customer;
+            } else {
+                foreach ($customer['customers']['customer'] as $customer) {
+                    $customer = $this->serializer->denormalize($customer, CustomerModel::class);
+                    /** @var CustomerModel $customer */
+                    $ret[$customer->getId()] = $customer;
+                }
             }
             return $ret;
         }
