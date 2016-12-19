@@ -124,6 +124,42 @@ class SearchModel
     /**
      * @return string
      */
+    public function getLimit(): string
+    {
+        return $this->limit;
+    }
+
+    /**
+     * @param string $limit
+     * @return SearchModel
+     */
+    public function setLimit(string $limit): SearchModel
+    {
+        $this->limit = $limit;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSort(): string
+    {
+        return $this->sort;
+    }
+
+    /**
+     * @param string $sort
+     * @return SearchModel
+     */
+    public function setSort(string $sort): SearchModel
+    {
+        $this->sort = $sort;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getParams(): string
     {
         $params = [];

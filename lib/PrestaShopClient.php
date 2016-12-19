@@ -1,7 +1,7 @@
 <?php
 
 use PrestaShopClient\Service\Service;
-use \PrestaShopClient\Service\CustomerService;
+use PrestaShopClient\Service\CustomerService;
 use PrestaShopClient\Service\OrderService;
 use Itav\Component\Serializer\Serializer;
 
