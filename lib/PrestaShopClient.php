@@ -3,6 +3,7 @@
 use PrestaShopClient\Service\Service;
 use PrestaShopClient\Service\CustomerService;
 use PrestaShopClient\Service\OrderService;
+use PrestaShopClient\Service\ResourceService;
 use Itav\Component\Serializer\Serializer;
 
 /**
@@ -26,6 +27,11 @@ class PrestaShopClient
     private $service;
 
     /**
+     * @var ResourceService
+     */
+    public $resource;
+
+    /**
      * @var Serializer
      */
     private $serializer;
@@ -39,6 +45,7 @@ class PrestaShopClient
         $this->serializer = new Serializer();
         $this->customers = new CustomerService($this->service, $this->serializer);
         $this->orders = new OrderService($this->service, $this->serializer);
+        $this->resource = new ResourceService($this->service,$this->serializer);
     }
 
     /**

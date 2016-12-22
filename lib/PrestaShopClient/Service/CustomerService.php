@@ -38,7 +38,7 @@ class CustomerService implements ServiceInterface
      * @param integer $idCustomer
      * @return CustomerModel|false
      */
-    public function getCustomer(int $idCustomer)
+    public function get(int $idCustomer)
     {
         $request = new SearchModel();
         $request->setResource('customers/' . $idCustomer . '/');
@@ -59,7 +59,7 @@ class CustomerService implements ServiceInterface
      * @param SearchModel $searchModel
      * @return CustomerModel[]|bool
      */
-    public function searchCustomers(SearchModel $searchModel)
+    public function search(SearchModel $searchModel)
     {
         $searchModel->setResource('customers');
         $searchModel->setDisplay('full');

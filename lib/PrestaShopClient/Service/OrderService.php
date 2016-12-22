@@ -38,7 +38,7 @@ class OrderService implements ServiceInterface
      * @param integer $idOrder
      * @return OrderModel|false
      */
-    public function getOrder(int $idOrder)
+    public function get(int $idOrder)
     {
         $request = new SearchModel();
         $request->setResource('orders/' . $idOrder . '/');
@@ -60,7 +60,7 @@ class OrderService implements ServiceInterface
      * @param SearchModel $searchModel
      * @return OrderModel[]|bool
      */
-    public function searchOrders(SearchModel $searchModel)
+    public function search(SearchModel $searchModel)
     {
         $searchModel->setResource('orders');
         $searchModel->setDisplay('full');
