@@ -5,23 +5,23 @@ namespace PrestaShopClient\Model\Order;
 class AssociationsModel
 {
     /**
-     * @var OrderRows
+     * @var OrderRow[]
      */
     private $order_rows;
 
     /**
-     * @return OrderRows
+     * @return OrderRow[]
      */
-    public function getOrderRows(): OrderRows
+    public function getOrderRows()
     {
         return $this->order_rows;
     }
 
     /**
-     * @param OrderRows $order_rows
+     * @param OrderRow $order_rows
      * @return AssociationsModel
      */
-    public function setOrderRows(OrderRows $order_rows): AssociationsModel
+    public function setOrderRows($order_rows)
     {
         $this->order_rows = $order_rows;
         return $this;

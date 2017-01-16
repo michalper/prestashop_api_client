@@ -39,9 +39,14 @@ class SearchModel
     private $sort;
 
     /**
+     * @var bool
+     */
+    private $json = true;
+
+    /**
      * @return string
      */
-    public function getResource(): string
+    public function getResource()
     {
         return $this->resource;
     }
@@ -50,7 +55,7 @@ class SearchModel
      * @param string $resource
      * @return SearchModel
      */
-    public function setResource(string $resource): SearchModel
+    public function setResource($resource)
     {
         $this->resource = $resource;
         return $this;
@@ -59,7 +64,7 @@ class SearchModel
     /**
      * @return string
      */
-    public function getDisplay(): string
+    public function getDisplay()
     {
         return $this->display;
     }
@@ -68,7 +73,7 @@ class SearchModel
      * @param string $display
      * @return SearchModel
      */
-    public function setDisplay(string $display): SearchModel
+    public function setDisplay($display)
     {
         $this->display = $display;
         return $this;
@@ -77,7 +82,7 @@ class SearchModel
     /**
      * @return array
      */
-    public function getFilter(): array
+    public function getFilter()
     {
         return $this->filter;
     }
@@ -86,7 +91,7 @@ class SearchModel
      * @param array $filter
      * @return SearchModel
      */
-    public function setFilter(array $filter): SearchModel
+    public function setFilter($filter)
     {
         $this->filter = $filter;
         return $this;
@@ -97,7 +102,7 @@ class SearchModel
      * @param string $value
      * @return SearchModel
      */
-    public function addFilter(string $key, $value): SearchModel
+    public function addFilter($key, $value)
     {
         $this->filter[$key] = $value;
         return $this;
@@ -106,7 +111,7 @@ class SearchModel
     /**
      * @return bool
      */
-    public function isDate(): bool
+    public function isDate()
     {
         return $this->date;
     }
@@ -115,7 +120,7 @@ class SearchModel
      * @param bool $date
      * @return SearchModel
      */
-    public function setDate(bool $date): SearchModel
+    public function setDate($date)
     {
         $this->date = $date;
         return $this;
@@ -124,7 +129,7 @@ class SearchModel
     /**
      * @return string
      */
-    public function getLimit(): string
+    public function getLimit()
     {
         return $this->limit;
     }
@@ -133,7 +138,7 @@ class SearchModel
      * @param string $limit
      * @return SearchModel
      */
-    public function setLimit(string $limit): SearchModel
+    public function setLimit($limit)
     {
         $this->limit = $limit;
         return $this;
@@ -142,7 +147,7 @@ class SearchModel
     /**
      * @return string
      */
-    public function getSort(): string
+    public function getSort()
     {
         return $this->sort;
     }
@@ -151,16 +156,34 @@ class SearchModel
      * @param string $sort
      * @return SearchModel
      */
-    public function setSort(string $sort): SearchModel
+    public function setSort($sort)
     {
         $this->sort = $sort;
         return $this;
     }
 
     /**
+     * @return bool
+     */
+    public function isJson()
+    {
+        return $this->json;
+    }
+
+    /**
+     * @param bool $json
+     * @return SearchModel
+     */
+    public function setJson($json)
+    {
+        $this->json = $json;
+        return $this;
+    }
+
+    /**
      * @return string
      */
-    public function getParams(): string
+    public function getParams()
     {
         $params = [];
 
@@ -184,6 +207,10 @@ class SearchModel
 
         if ($this->limit) {
             $params['limit'] = $this->limit;
+        }
+
+        if ($this->json) {
+            $params['output_format'] = 'JSON';
         }
 
         return $this->resource . '?' . http_build_query($params);

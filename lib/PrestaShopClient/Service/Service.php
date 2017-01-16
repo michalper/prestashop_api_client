@@ -77,7 +77,7 @@ class Service
      * @param SearchModel $params
      * @return Service
      */
-    public function setParams(SearchModel $params): Service
+    public function setParams($params)
     {
         $this->params = $params;
         return $this;

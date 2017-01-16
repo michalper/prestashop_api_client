@@ -33,7 +33,7 @@ class ResourceService implements ServiceInterface
     }
 
     /**
-     * @return \SimpleXMLElement
+     * @return array
      */
     public function get()
     {
@@ -44,7 +44,7 @@ class ResourceService implements ServiceInterface
             ->setParams($request)
             ->setType(Service::REQUEST_METHOD_GET)
             ->request()
-            ->getXmlBody();
+            ->getBody();
 
         return $resource;
     }

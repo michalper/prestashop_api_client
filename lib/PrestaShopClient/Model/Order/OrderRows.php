@@ -12,7 +12,7 @@ class OrderRows
     /**
      * @return OrderRow[]
      */
-    public function getOrderRow(): array
+    public function getOrderRow()
     {
         return $this->order_row;
     }
@@ -21,7 +21,7 @@ class OrderRows
      * @param OrderRow[] $order_row
      * @return OrderRows
      */
-    public function setOrderRow(array $order_row): OrderRows
+    public function setOrderRow($order_row)
     {
         $this->order_row = $order_row;
         return $this;

@@ -242,7 +242,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -251,7 +251,7 @@ class OrderModel
      * @param int $id
      * @return OrderModel
      */
-    public function setId(int $id): OrderModel
+    public function setId($id)
     {
         $this->id = $id;
         return $this;
@@ -260,7 +260,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdAddressDelivery(): int
+    public function getIdAddressDelivery()
     {
         return $this->id_address_delivery;
     }
@@ -269,7 +269,7 @@ class OrderModel
      * @param int $id_address_delivery
      * @return OrderModel
      */
-    public function setIdAddressDelivery(int $id_address_delivery): OrderModel
+    public function setIdAddressDelivery($id_address_delivery)
     {
         $this->id_address_delivery = $id_address_delivery;
         return $this;
@@ -278,7 +278,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdAddressInvoice(): int
+    public function getIdAddressInvoice()
     {
         return $this->id_address_invoice;
     }
@@ -287,7 +287,7 @@ class OrderModel
      * @param int $id_address_invoice
      * @return OrderModel
      */
-    public function setIdAddressInvoice(int $id_address_invoice): OrderModel
+    public function setIdAddressInvoice($id_address_invoice)
     {
         $this->id_address_invoice = $id_address_invoice;
         return $this;
@@ -296,7 +296,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdCart(): int
+    public function getIdCart()
     {
         return $this->id_cart;
     }
@@ -305,7 +305,7 @@ class OrderModel
      * @param int $id_cart
      * @return OrderModel
      */
-    public function setIdCart(int $id_cart): OrderModel
+    public function setIdCart($id_cart)
     {
         $this->id_cart = $id_cart;
         return $this;
@@ -314,7 +314,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdCurrency(): int
+    public function getIdCurrency()
     {
         return $this->id_currency;
     }
@@ -323,7 +323,7 @@ class OrderModel
      * @param int $id_currency
      * @return OrderModel
      */
-    public function setIdCurrency(int $id_currency): OrderModel
+    public function setIdCurrency($id_currency)
     {
         $this->id_currency = $id_currency;
         return $this;
@@ -332,7 +332,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdLang(): int
+    public function getIdLang()
     {
         return $this->id_lang;
     }
@@ -341,7 +341,7 @@ class OrderModel
      * @param int $id_lang
      * @return OrderModel
      */
-    public function setIdLang(int $id_lang): OrderModel
+    public function setIdLang($id_lang)
     {
         $this->id_lang = $id_lang;
         return $this;
@@ -350,7 +350,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdCustomer(): int
+    public function getIdCustomer()
     {
         return $this->id_customer;
     }
@@ -359,7 +359,7 @@ class OrderModel
      * @param int $id_customer
      * @return OrderModel
      */
-    public function setIdCustomer(int $id_customer): OrderModel
+    public function setIdCustomer($id_customer)
     {
         $this->id_customer = $id_customer;
         return $this;
@@ -368,7 +368,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdCarrier(): int
+    public function getIdCarrier()
     {
         return $this->id_carrier;
     }
@@ -377,7 +377,7 @@ class OrderModel
      * @param int $id_carrier
      * @return OrderModel
      */
-    public function setIdCarrier(int $id_carrier): OrderModel
+    public function setIdCarrier($id_carrier)
     {
         $this->id_carrier = $id_carrier;
         return $this;
@@ -386,7 +386,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getCurrentState(): int
+    public function getCurrentState()
     {
         return $this->current_state;
     }
@@ -395,7 +395,7 @@ class OrderModel
      * @param int $current_state
      * @return OrderModel
      */
-    public function setCurrentState(int $current_state): OrderModel
+    public function setCurrentState($current_state)
     {
         $this->current_state = $current_state;
         return $this;
@@ -404,7 +404,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getModule(): string
+    public function getModule()
     {
         return $this->module;
     }
@@ -413,7 +413,7 @@ class OrderModel
      * @param string $module
      * @return OrderModel
      */
-    public function setModule(string $module): OrderModel
+    public function setModule($module)
     {
         $this->module = $module;
         return $this;
@@ -422,7 +422,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getInvoiceNumber(): string
+    public function getInvoiceNumber()
     {
         return $this->invoice_number;
     }
@@ -431,7 +431,7 @@ class OrderModel
      * @param string $invoice_number
      * @return OrderModel
      */
-    public function setInvoiceNumber(string $invoice_number): OrderModel
+    public function setInvoiceNumber($invoice_number)
     {
         $this->invoice_number = $invoice_number;
         return $this;
@@ -440,16 +440,16 @@ class OrderModel
     /**
      * @return \DateTime
      */
-    public function getInvoiceDate(): \DateTime
+    public function getInvoiceDate()
     {
         return $this->invoice_date;
     }
 
     /**
-     * @param \DateTime $invoice_date
+     * @param $invoice_date
      * @return OrderModel
      */
-    public function setInvoiceDate(\DateTime $invoice_date): OrderModel
+    public function setInvoiceDate($invoice_date)
     {
         $this->invoice_date = $invoice_date;
         return $this;
@@ -458,7 +458,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getDeliveryNumber(): string
+    public function getDeliveryNumber()
     {
         return $this->delivery_number;
     }
@@ -467,7 +467,7 @@ class OrderModel
      * @param string $delivery_number
      * @return OrderModel
      */
-    public function setDeliveryNumber(string $delivery_number): OrderModel
+    public function setDeliveryNumber($delivery_number)
     {
         $this->delivery_number = $delivery_number;
         return $this;
@@ -476,16 +476,16 @@ class OrderModel
     /**
      * @return \DateTime
      */
-    public function getDeliveryDate(): \DateTime
+    public function getDeliveryDate()
     {
         return $this->delivery_date;
     }
 
     /**
-     * @param \DateTime $delivery_date
+     * @param $delivery_date
      * @return OrderModel
      */
-    public function setDeliveryDate(\DateTime $delivery_date): OrderModel
+    public function setDeliveryDate($delivery_date)
     {
         $this->delivery_date = $delivery_date;
         return $this;
@@ -494,7 +494,7 @@ class OrderModel
     /**
      * @return bool
      */
-    public function isValid(): bool
+    public function isValid()
     {
         return $this->valid;
     }
@@ -503,7 +503,7 @@ class OrderModel
      * @param bool $valid
      * @return OrderModel
      */
-    public function setValid(bool $valid): OrderModel
+    public function setValid($valid)
     {
         $this->valid = $valid;
         return $this;
@@ -512,16 +512,16 @@ class OrderModel
     /**
      * @return \DateTime
      */
-    public function getDateAdd(): \DateTime
+    public function getDateAdd()
     {
         return $this->date_add;
     }
 
     /**
-     * @param \DateTime $date_add
+     * @param $date_add
      * @return OrderModel
      */
-    public function setDateAdd(\DateTime $date_add): OrderModel
+    public function setDateAdd($date_add)
     {
         $this->date_add = $date_add;
         return $this;
@@ -530,16 +530,16 @@ class OrderModel
     /**
      * @return \DateTime
      */
-    public function getDateUpd(): \DateTime
+    public function getDateUpd()
     {
         return $this->date_upd;
     }
 
     /**
-     * @param \DateTime $date_upd
+     * @param $date_upd
      * @return OrderModel
      */
-    public function setDateUpd(\DateTime $date_upd): OrderModel
+    public function setDateUpd($date_upd)
     {
         $this->date_upd = $date_upd;
         return $this;
@@ -548,7 +548,7 @@ class OrderModel
     /**
      * @return array
      */
-    public function getShippingNumber(): array
+    public function getShippingNumber()
     {
         return $this->shipping_number;
     }
@@ -557,7 +557,7 @@ class OrderModel
      * @param array $shipping_number
      * @return OrderModel
      */
-    public function setShippingNumber(array $shipping_number): OrderModel
+    public function setShippingNumber($shipping_number)
     {
         $this->shipping_number = $shipping_number;
         return $this;
@@ -566,7 +566,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdShopGroup(): int
+    public function getIdShopGroup()
     {
         return $this->id_shop_group;
     }
@@ -575,7 +575,7 @@ class OrderModel
      * @param int $id_shop_group
      * @return OrderModel
      */
-    public function setIdShopGroup(int $id_shop_group): OrderModel
+    public function setIdShopGroup($id_shop_group)
     {
         $this->id_shop_group = $id_shop_group;
         return $this;
@@ -584,7 +584,7 @@ class OrderModel
     /**
      * @return int
      */
-    public function getIdShop(): int
+    public function getIdShop()
     {
         return $this->id_shop;
     }
@@ -593,7 +593,7 @@ class OrderModel
      * @param int $id_shop
      * @return OrderModel
      */
-    public function setIdShop(int $id_shop): OrderModel
+    public function setIdShop($id_shop)
     {
         $this->id_shop = $id_shop;
         return $this;
@@ -602,7 +602,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getSecureKey(): string
+    public function getSecureKey()
     {
         return $this->secure_key;
     }
@@ -611,7 +611,7 @@ class OrderModel
      * @param string $secure_key
      * @return OrderModel
      */
-    public function setSecureKey(string $secure_key): OrderModel
+    public function setSecureKey($secure_key)
     {
         $this->secure_key = $secure_key;
         return $this;
@@ -620,7 +620,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getPayment(): string
+    public function getPayment()
     {
         return $this->payment;
     }
@@ -629,7 +629,7 @@ class OrderModel
      * @param string $payment
      * @return OrderModel
      */
-    public function setPayment(string $payment): OrderModel
+    public function setPayment($payment)
     {
         $this->payment = $payment;
         return $this;
@@ -638,7 +638,7 @@ class OrderModel
     /**
      * @return bool
      */
-    public function isRecyclable(): bool
+    public function isRecyclable()
     {
         return $this->recyclable;
     }
@@ -647,7 +647,7 @@ class OrderModel
      * @param bool $recyclable
      * @return OrderModel
      */
-    public function setRecyclable(bool $recyclable): OrderModel
+    public function setRecyclable($recyclable)
     {
         $this->recyclable = $recyclable;
         return $this;
@@ -656,7 +656,7 @@ class OrderModel
     /**
      * @return bool
      */
-    public function isGift(): bool
+    public function isGift()
     {
         return $this->gift;
     }
@@ -665,7 +665,7 @@ class OrderModel
      * @param bool $gift
      * @return OrderModel
      */
-    public function setGift(bool $gift): OrderModel
+    public function setGift($gift)
     {
         $this->gift = $gift;
         return $this;
@@ -674,7 +674,7 @@ class OrderModel
     /**
      * @return array
      */
-    public function getGiftMessage(): array
+    public function getGiftMessage()
     {
         return $this->gift_message;
     }
@@ -683,7 +683,7 @@ class OrderModel
      * @param array $gift_message
      * @return OrderModel
      */
-    public function setGiftMessage(array $gift_message): OrderModel
+    public function setGiftMessage($gift_message)
     {
         $this->gift_message = $gift_message;
         return $this;
@@ -692,7 +692,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getMobileTheme(): string
+    public function getMobileTheme()
     {
         return $this->mobile_theme;
     }
@@ -701,7 +701,7 @@ class OrderModel
      * @param string $mobile_theme
      * @return OrderModel
      */
-    public function setMobileTheme(string $mobile_theme): OrderModel
+    public function setMobileTheme($mobile_theme)
     {
         $this->mobile_theme = $mobile_theme;
         return $this;
@@ -710,7 +710,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalDiscounts(): float
+    public function getTotalDiscounts()
     {
         return $this->total_discounts;
     }
@@ -719,7 +719,7 @@ class OrderModel
      * @param float $total_discounts
      * @return OrderModel
      */
-    public function setTotalDiscounts(float $total_discounts): OrderModel
+    public function setTotalDiscounts($total_discounts)
     {
         $this->total_discounts = $total_discounts;
         return $this;
@@ -728,7 +728,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalDiscountsTaxIncl(): float
+    public function getTotalDiscountsTaxIncl()
     {
         return $this->total_discounts_tax_incl;
     }
@@ -737,7 +737,7 @@ class OrderModel
      * @param float $total_discounts_tax_incl
      * @return OrderModel
      */
-    public function setTotalDiscountsTaxIncl(float $total_discounts_tax_incl): OrderModel
+    public function setTotalDiscountsTaxIncl($total_discounts_tax_incl)
     {
         $this->total_discounts_tax_incl = $total_discounts_tax_incl;
         return $this;
@@ -746,7 +746,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalDiscountsTaxExcl(): float
+    public function getTotalDiscountsTaxExcl()
     {
         return $this->total_discounts_tax_excl;
     }
@@ -755,7 +755,7 @@ class OrderModel
      * @param float $total_discounts_tax_excl
      * @return OrderModel
      */
-    public function setTotalDiscountsTaxExcl(float $total_discounts_tax_excl): OrderModel
+    public function setTotalDiscountsTaxExcl($total_discounts_tax_excl)
     {
         $this->total_discounts_tax_excl = $total_discounts_tax_excl;
         return $this;
@@ -764,7 +764,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalPaid(): float
+    public function getTotalPaid()
     {
         return $this->total_paid;
     }
@@ -773,7 +773,7 @@ class OrderModel
      * @param float $total_paid
      * @return OrderModel
      */
-    public function setTotalPaid(float $total_paid): OrderModel
+    public function setTotalPaid($total_paid)
     {
         $this->total_paid = $total_paid;
         return $this;
@@ -782,7 +782,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalPaidTaxIncl(): float
+    public function getTotalPaidTaxIncl()
     {
         return $this->total_paid_tax_incl;
     }
@@ -791,7 +791,7 @@ class OrderModel
      * @param float $total_paid_tax_incl
      * @return OrderModel
      */
-    public function setTotalPaidTaxIncl(float $total_paid_tax_incl): OrderModel
+    public function setTotalPaidTaxIncl($total_paid_tax_incl)
     {
         $this->total_paid_tax_incl = $total_paid_tax_incl;
         return $this;
@@ -800,7 +800,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalPaidTaxExcl(): float
+    public function getTotalPaidTaxExcl()
     {
         return $this->total_paid_tax_excl;
     }
@@ -809,7 +809,7 @@ class OrderModel
      * @param float $total_paid_tax_excl
      * @return OrderModel
      */
-    public function setTotalPaidTaxExcl(float $total_paid_tax_excl): OrderModel
+    public function setTotalPaidTaxExcl($total_paid_tax_excl)
     {
         $this->total_paid_tax_excl = $total_paid_tax_excl;
         return $this;
@@ -818,7 +818,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalPaidReal(): float
+    public function getTotalPaidReal()
     {
         return $this->total_paid_real;
     }
@@ -827,7 +827,7 @@ class OrderModel
      * @param float $total_paid_real
      * @return OrderModel
      */
-    public function setTotalPaidReal(float $total_paid_real): OrderModel
+    public function setTotalPaidReal($total_paid_real)
     {
         $this->total_paid_real = $total_paid_real;
         return $this;
@@ -836,7 +836,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalProducts(): float
+    public function getTotalProducts()
     {
         return $this->total_products;
     }
@@ -845,7 +845,7 @@ class OrderModel
      * @param float $total_products
      * @return OrderModel
      */
-    public function setTotalProducts(float $total_products): OrderModel
+    public function setTotalProducts($total_products)
     {
         $this->total_products = $total_products;
         return $this;
@@ -854,7 +854,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalProductsWt(): float
+    public function getTotalProductsWt()
     {
         return $this->total_products_wt;
     }
@@ -863,7 +863,7 @@ class OrderModel
      * @param float $total_products_wt
      * @return OrderModel
      */
-    public function setTotalProductsWt(float $total_products_wt): OrderModel
+    public function setTotalProductsWt($total_products_wt)
     {
         $this->total_products_wt = $total_products_wt;
         return $this;
@@ -872,7 +872,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalShipping(): float
+    public function getTotalShipping()
     {
         return $this->total_shipping;
     }
@@ -881,7 +881,7 @@ class OrderModel
      * @param float $total_shipping
      * @return OrderModel
      */
-    public function setTotalShipping(float $total_shipping): OrderModel
+    public function setTotalShipping($total_shipping)
     {
         $this->total_shipping = $total_shipping;
         return $this;
@@ -890,7 +890,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalShippingTaxIncl(): float
+    public function getTotalShippingTaxIncl()
     {
         return $this->total_shipping_tax_incl;
     }
@@ -899,7 +899,7 @@ class OrderModel
      * @param float $total_shipping_tax_incl
      * @return OrderModel
      */
-    public function setTotalShippingTaxIncl(float $total_shipping_tax_incl): OrderModel
+    public function setTotalShippingTaxIncl($total_shipping_tax_incl)
     {
         $this->total_shipping_tax_incl = $total_shipping_tax_incl;
         return $this;
@@ -908,7 +908,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalShippingTaxExcl(): float
+    public function getTotalShippingTaxExcl()
     {
         return $this->total_shipping_tax_excl;
     }
@@ -917,7 +917,7 @@ class OrderModel
      * @param float $total_shipping_tax_excl
      * @return OrderModel
      */
-    public function setTotalShippingTaxExcl(float $total_shipping_tax_excl): OrderModel
+    public function setTotalShippingTaxExcl($total_shipping_tax_excl)
     {
         $this->total_shipping_tax_excl = $total_shipping_tax_excl;
         return $this;
@@ -926,7 +926,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getCarrierTaxRate(): float
+    public function getCarrierTaxRate()
     {
         return $this->carrier_tax_rate;
     }
@@ -935,7 +935,7 @@ class OrderModel
      * @param float $carrier_tax_rate
      * @return OrderModel
      */
-    public function setCarrierTaxRate(float $carrier_tax_rate): OrderModel
+    public function setCarrierTaxRate($carrier_tax_rate)
     {
         $this->carrier_tax_rate = $carrier_tax_rate;
         return $this;
@@ -944,7 +944,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalWrapping(): float
+    public function getTotalWrapping()
     {
         return $this->total_wrapping;
     }
@@ -953,7 +953,7 @@ class OrderModel
      * @param float $total_wrapping
      * @return OrderModel
      */
-    public function setTotalWrapping(float $total_wrapping): OrderModel
+    public function setTotalWrapping($total_wrapping)
     {
         $this->total_wrapping = $total_wrapping;
         return $this;
@@ -962,7 +962,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalWrappingTaxIncl(): float
+    public function getTotalWrappingTaxIncl()
     {
         return $this->total_wrapping_tax_incl;
     }
@@ -971,7 +971,7 @@ class OrderModel
      * @param float $total_wrapping_tax_incl
      * @return OrderModel
      */
-    public function setTotalWrappingTaxIncl(float $total_wrapping_tax_incl): OrderModel
+    public function setTotalWrappingTaxIncl($total_wrapping_tax_incl)
     {
         $this->total_wrapping_tax_incl = $total_wrapping_tax_incl;
         return $this;
@@ -980,7 +980,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getTotalWrappingTaxExcl(): float
+    public function getTotalWrappingTaxExcl()
     {
         return $this->total_wrapping_tax_excl;
     }
@@ -989,7 +989,7 @@ class OrderModel
      * @param float $total_wrapping_tax_excl
      * @return OrderModel
      */
-    public function setTotalWrappingTaxExcl(float $total_wrapping_tax_excl): OrderModel
+    public function setTotalWrappingTaxExcl($total_wrapping_tax_excl)
     {
         $this->total_wrapping_tax_excl = $total_wrapping_tax_excl;
         return $this;
@@ -998,7 +998,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getRoundMode(): string
+    public function getRoundMode()
     {
         return $this->round_mode;
     }
@@ -1007,7 +1007,7 @@ class OrderModel
      * @param string $round_mode
      * @return OrderModel
      */
-    public function setRoundMode(string $round_mode): OrderModel
+    public function setRoundMode($round_mode)
     {
         $this->round_mode = $round_mode;
         return $this;
@@ -1016,7 +1016,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getRoundType(): string
+    public function getRoundType()
     {
         return $this->round_type;
     }
@@ -1025,7 +1025,7 @@ class OrderModel
      * @param string $round_type
      * @return OrderModel
      */
-    public function setRoundType(string $round_type): OrderModel
+    public function setRoundType($round_type)
     {
         $this->round_type = $round_type;
         return $this;
@@ -1034,7 +1034,7 @@ class OrderModel
     /**
      * @return float
      */
-    public function getConversionRate(): float
+    public function getConversionRate()
     {
         return $this->conversion_rate;
     }
@@ -1043,7 +1043,7 @@ class OrderModel
      * @param float $conversion_rate
      * @return OrderModel
      */
-    public function setConversionRate(float $conversion_rate): OrderModel
+    public function setConversionRate($conversion_rate)
     {
         $this->conversion_rate = $conversion_rate;
         return $this;
@@ -1052,7 +1052,7 @@ class OrderModel
     /**
      * @return string
      */
-    public function getReference(): string
+    public function getReference()
     {
         return $this->reference;
     }
@@ -1061,7 +1061,7 @@ class OrderModel
      * @param string $reference
      * @return OrderModel
      */
-    public function setReference(string $reference): OrderModel
+    public function setReference($reference)
     {
         $this->reference = $reference;
         return $this;
@@ -1070,7 +1070,7 @@ class OrderModel
     /**
      * @return AssociationsModel
      */
-    public function getAssociations(): AssociationsModel
+    public function getAssociations()
     {
         return $this->associations;
     }
@@ -1079,7 +1079,7 @@ class OrderModel
      * @param AssociationsModel $associations
      * @return OrderModel
      */
-    public function setAssociations(AssociationsModel $associations): OrderModel
+    public function setAssociations($associations)
     {
         $this->associations = $associations;
         return $this;

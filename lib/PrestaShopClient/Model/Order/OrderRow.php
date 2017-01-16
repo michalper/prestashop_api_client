@@ -68,7 +68,7 @@ class OrderRow
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -77,7 +77,7 @@ class OrderRow
      * @param int $id
      * @return OrderRow
      */
-    public function setId(int $id): OrderRow
+    public function setId($id)
     {
         $this->id = $id;
         return $this;
@@ -86,7 +86,7 @@ class OrderRow
     /**
      * @return int
      */
-    public function getProductId(): int
+    public function getProductId()
     {
         return $this->product_id;
     }
@@ -95,7 +95,7 @@ class OrderRow
      * @param int $product_id
      * @return OrderRow
      */
-    public function setProductId(int $product_id): OrderRow
+    public function setProductId($product_id)
     {
         $this->product_id = $product_id;
         return $this;
@@ -104,7 +104,7 @@ class OrderRow
     /**
      * @return int
      */
-    public function getProductAttributeId(): int
+    public function getProductAttributeId()
     {
         return $this->product_attribute_id;
     }
@@ -113,7 +113,7 @@ class OrderRow
      * @param int $product_attribute_id
      * @return OrderRow
      */
-    public function setProductAttributeId(int $product_attribute_id): OrderRow
+    public function setProductAttributeId($product_attribute_id)
     {
         $this->product_attribute_id = $product_attribute_id;
         return $this;
@@ -122,7 +122,7 @@ class OrderRow
     /**
      * @return int
      */
-    public function getProductQuantity(): int
+    public function getProductQuantity()
     {
         return $this->product_quantity;
     }
@@ -131,7 +131,7 @@ class OrderRow
      * @param int $product_quantity
      * @return OrderRow
      */
-    public function setProductQuantity(int $product_quantity): OrderRow
+    public function setProductQuantity($product_quantity)
     {
         $this->product_quantity = $product_quantity;
         return $this;
@@ -140,7 +140,7 @@ class OrderRow
     /**
      * @return string
      */
-    public function getProductName(): string
+    public function getProductName()
     {
         return $this->product_name;
     }
@@ -149,7 +149,7 @@ class OrderRow
      * @param string $product_name
      * @return OrderRow
      */
-    public function setProductName(string $product_name): OrderRow
+    public function setProductName(string $product_name)
     {
         $this->product_name = $product_name;
         return $this;
@@ -158,7 +158,7 @@ class OrderRow
     /**
      * @return string
      */
-    public function getProductReference(): string
+    public function getProductReference()
     {
         return $this->product_reference;
     }
@@ -167,7 +167,7 @@ class OrderRow
      * @param string $product_reference
      * @return OrderRow
      */
-    public function setProductReference(string $product_reference): OrderRow
+    public function setProductReference(string $product_reference)
     {
         $this->product_reference = $product_reference;
         return $this;
@@ -176,7 +176,7 @@ class OrderRow
     /**
      * @return array
      */
-    public function getProductEan13(): array
+    public function getProductEan13()
     {
         return $this->product_ean13;
     }
@@ -185,7 +185,7 @@ class OrderRow
      * @param array $product_ean13
      * @return OrderRow
      */
-    public function setProductEan13(array $product_ean13): OrderRow
+    public function setProductEan13($product_ean13)
     {
         $this->product_ean13 = $product_ean13;
         return $this;
@@ -194,7 +194,7 @@ class OrderRow
     /**
      * @return array
      */
-    public function getProductIsbn(): array
+    public function getProductIsbn()
     {
         return $this->product_isbn;
     }
@@ -203,7 +203,7 @@ class OrderRow
      * @param array $product_isbn
      * @return OrderRow
      */
-    public function setProductIsbn(array $product_isbn): OrderRow
+    public function setProductIsbn($product_isbn)
     {
         $this->product_isbn = $product_isbn;
         return $this;
@@ -212,7 +212,7 @@ class OrderRow
     /**
      * @return array
      */
-    public function getProductUpc(): array
+    public function getProductUpc()
     {
         return $this->product_upc;
     }
@@ -221,7 +221,7 @@ class OrderRow
      * @param array $product_upc
      * @return OrderRow
      */
-    public function setProductUpc(array $product_upc): OrderRow
+    public function setProductUpc($product_upc)
     {
         $this->product_upc = $product_upc;
         return $this;
@@ -230,7 +230,7 @@ class OrderRow
     /**
      * @return float
      */
-    public function getProductPrice(): float
+    public function getProductPrice()
     {
         return $this->product_price;
     }
@@ -239,7 +239,7 @@ class OrderRow
      * @param float $product_price
      * @return OrderRow
      */
-    public function setProductPrice(float $product_price): OrderRow
+    public function setProductPrice($product_price)
     {
         $this->product_price = $product_price;
         return $this;
@@ -248,7 +248,7 @@ class OrderRow
     /**
      * @return float
      */
-    public function getUnitPriceTaxIncl(): float
+    public function getUnitPriceTaxIncl()
     {
         return $this->unit_price_tax_incl;
     }
@@ -257,7 +257,7 @@ class OrderRow
      * @param float $unit_price_tax_incl
      * @return OrderRow
      */
-    public function setUnitPriceTaxIncl(float $unit_price_tax_incl): OrderRow
+    public function setUnitPriceTaxIncl($unit_price_tax_incl)
     {
         $this->unit_price_tax_incl = $unit_price_tax_incl;
         return $this;
@@ -266,7 +266,7 @@ class OrderRow
     /**
      * @return float
      */
-    public function getUnitPriceTaxExcl(): float
+    public function getUnitPriceTaxExcl()
     {
         return $this->unit_price_tax_excl;
     }
@@ -275,7 +275,7 @@ class OrderRow
      * @param float $unit_price_tax_excl
      * @return OrderRow
      */
-    public function setUnitPriceTaxExcl(float $unit_price_tax_excl): OrderRow
+    public function setUnitPriceTaxExcl($unit_price_tax_excl)
     {
         $this->unit_price_tax_excl = $unit_price_tax_excl;
         return $this;

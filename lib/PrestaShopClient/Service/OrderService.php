@@ -70,24 +70,8 @@ class OrderService implements ServiceInterface
             ->setType(Service::REQUEST_METHOD_GET)
             ->request()
             ->getBody();
-
-        $ret = [];
-        if (
-            isset($order['orders'])
-            && isset($order['orders']['order'])
-        ) {
-            if (!Tools::isNumericArray($order['orders']['order'])) {
-                $order = $this->serializer->denormalize($order['orders']['order'], OrderModel::class);
-                /** @var OrderModel $order */
-                $ret[$order->getId()] = $order;
-            } else {
-                foreach ($order['orders']['order'] as $order) {
-                    $order = $this->serializer->denormalize($order, OrderModel::class);
-                    /** @var OrderModel $order */
-                    $ret[$order->getId()] = $order;
-                }
-            }
-            return $ret;
+        if (isset($order['orders'])) {
+            return $this->serializer->denormalize($order['orders'], OrderModel::class . '[]');
         }
         return false;
     }

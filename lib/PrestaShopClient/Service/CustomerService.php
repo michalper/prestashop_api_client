@@ -70,23 +70,8 @@ class CustomerService implements ServiceInterface
             ->request()
             ->getBody();
 
-        $ret = [];
-        if (
-            isset($customer['customers'])
-            && isset($customer['customers']['customer'])
-        ) {
-            if (!Tools::isNumericArray($customer['customers']['customer'])) {
-                $customer = $this->serializer->denormalize($customer['customers']['customer'], CustomerModel::class);
-                /** @var CustomerModel $customer */
-                $ret[$customer->getId()] = $customer;
-            } else {
-                foreach ($customer['customers']['customer'] as $customer) {
-                    $customer = $this->serializer->denormalize($customer, CustomerModel::class);
-                    /** @var CustomerModel $customer */
-                    $ret[$customer->getId()] = $customer;
-                }
-            }
-            return $ret;
+        if (isset($customer['customers'])) {
+            return $this->serializer->denormalize($customer['customers'], CustomerModel::class . '[]');
         }
         return false;
     }
