@@ -1,7 +1,6 @@
 {
   "name": "michalper/prestashop_api_client",
   "description": "Unofficial PrestaShop REST API Client",
-  "version": "0.1.0",
   "homepage": "https://github.com/michalper/prestashop_api_client",
   "license": "MIT",
   "authors": [
