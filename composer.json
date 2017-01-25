@@ -29,7 +29,7 @@
     "php": ">=7.0",
     "guzzlehttp/guzzle": "~6.0",
     "itav/serializer": "^1.2",
-    "michalper/tools": "dev-master"
+    "michalper/tools": "^0.1.0"
   },
   "require-dev": {
   },
