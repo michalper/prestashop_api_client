@@ -235,7 +235,7 @@ class OrderModel
     private $reference;
 
     /**
-     * @var AssociationsModel
+     * @var \PrestaShopClient\Model\Order\AssociationsModel
      */
     private $associations;
 
@@ -1091,9 +1091,7 @@ class OrderModel
     public function getOrderRows()
     {
         if ($rows = $this->associations->getOrderRows()) {
-            if ($products = $rows->getOrderRow()) {
-                return $products;
-            }
+            return $rows;
         }
         return false;
     }
