@@ -19,8 +19,8 @@
     "presta"
   ],
   "require": {
-    "php": ">=7.0",
-    "guzzlehttp/guzzle": "~6.0",
+    "php": ">=7.2.5",
+    "guzzlehttp/guzzle": "^7.0",
     "itav/serializer": "^1.2",
     "michalper/tools": "dev-master"
   },
